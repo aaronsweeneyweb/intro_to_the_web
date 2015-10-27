@@ -21,7 +21,13 @@ get '/aaron' do
   "do muay thai"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ['Rathgar', 'Blackbeard', 'Captain Jack'].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
