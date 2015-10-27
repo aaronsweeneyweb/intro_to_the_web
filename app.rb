@@ -22,5 +22,6 @@ get '/aaron' do
 end
 
 get '/cat' do
+  @name = ['Rathgar', 'Blackbeard', 'Captain Jack'].sample
   erb(:index)
 end
